@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {view as CitySelector} from './weather-redux/city-selector/';
-import {view as Weather} from './weather-redux/weather/';
-import store from './weather-redux/Store.js'
-import './index.css';
+import TodoApp from './todoList/TodoApp';
+
+import store from './todoList/Store.js';
 
 ReactDOM.render(
   <Provider store={store}>
-  <div>
-  <CitySelector />
-  <Weather />
-</div>
+    <TodoApp />
   </Provider>,
   document.getElementById('root')
 );
